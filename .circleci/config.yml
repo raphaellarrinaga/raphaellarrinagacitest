@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    # docker:
+    #   - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
+
+      - run: npm install
+      - save_cache: # special step to save the dependency cache with the `package.json` cache key template
+          key: node-theme-v2-{{ checksum "./package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build project
+          command: npm run production
+
+      - run:
+          name: Print the Current Time
+          command: date

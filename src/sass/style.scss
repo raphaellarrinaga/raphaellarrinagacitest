@@ -1,0 +1,212 @@
+// Include normalize scss
+// @see https://github.com/JohnAlbin/normalize-scss
+@import "normalize/import-now";
+
+$page-color: #fafafa;
+$text-color: #111;
+$pink: #FD3F92;
+
+// Globals
+*,
+*:after,
+*:before{
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+body{
+  background: $page-color;
+  box-sizing: border-box;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+  min-height: 100vh;
+  padding: 5vw 7vw;
+}
+
+h1{
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+
+  span{
+    font-weight: normal;
+  }
+}
+
+ul{
+  font-size: .7rem;
+  list-style: none;
+  margin: 1.5em -1vw;
+  padding: 0;
+}
+
+li{
+  padding: 1vw;
+
+  @media (min-width: 480px){
+    display: inline-block;
+  }
+}
+
+a{
+  background: linear-gradient(to top,$pink 80%,$pink 100%) no-repeat;
+  background-size: 0 1px;
+  background-position: 0 100%;
+  color: $text-color;
+  text-decoration: none;
+  transition: all .6s cubic-bezier(0.19,1,0.22,1);
+
+  &:focus,
+  &:hover{
+    background-size: 100% 1px;
+    color: $pink;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.cv{
+  display: flex;
+  align-items: flex-end;
+}
+
+.cv__text{
+  flex: 1;
+
+  &:before{
+    background: url("../img/icn-arrow-left.svg") no-repeat left center;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    margin-right: .5rem;
+    width: 15px;
+  }
+}
+
+.cv__link{
+  background: white;
+  border: 1px solid #111;
+  box-shadow: 2px 2px 0 #111;
+  display: block;
+  font-size: .4rem;
+  line-height: 1.3;
+  letter-spacing: .02rem;
+  height: 112px;
+  // margin-bottom: 1rem;
+  margin-right: .8rem;
+  overflow: visible;
+  padding: .4rem .5rem;
+  position: relative;
+  width: 81px;
+  word-break: break-all;
+  transition: none;
+
+  &:hover{
+    cursor: url("../img/eyes.svg"), auto;
+    box-shadow: none;
+    transform: translateY(3px) translateX(3px);
+
+    &:before{
+      right: -1px;
+    }
+
+  }
+
+  abbr{
+    float: left;
+    font-size: .8rem;
+    line-height: 1.4;
+    margin-right: .3rem;
+    text-decoration: none;
+  }
+
+  span{
+    display: block;
+    margin-top: .1rem;
+  }
+
+  &:before{
+    background: #111;
+    border: 4px solid transparent;
+    border-right-color: $page-color;
+    border-top-color: $page-color;
+    content: "";
+    display: block;
+    height: 0px;
+    position: absolute;
+    right: -3px;
+    top: -1px;
+    width: 0px;
+    z-index: 10;
+  }
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: auto;
+
+  p{
+    margin-top: 0;
+  }
+}
+
+.description{
+  font-size: .8rem;
+  flex: 1 1 22rem;
+  max-width: 30rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+figure{
+  margin: 0;
+  position: relative;
+
+  @media (min-width: 520px){
+    text-align: right;
+  }
+}
+
+figcaption{
+  font-size: .7rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 100% 100%;
+  transform: rotate(90deg) translateX(100%) translateY(150%);
+  white-space: nowrap;
+
+  &:before{
+    background: white;
+    border-radius: 4px;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin-right: .5rem;
+    width: 6px;
+  }
+}
+
+footer{
+  font-size: .7rem;
+  margin: 3rem -.5vw 0;
+
+  span,
+   a{
+    color: #666;
+    margin: .5vw;
+    text-decoration: none;
+  }
+
+  span{
+    font-weight: bold;
+  }
+}
