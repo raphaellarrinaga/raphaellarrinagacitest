@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: circleci/node
 
     steps:
       - checkout
@@ -12,10 +12,19 @@ jobs:
           command: echo Hello, world.
 
       - run:
-          name: Print the Current Time
-          command: date
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
 
-      - run: npm install
+      - restore_cache: # special step to restore the dependency cache
+          # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
+          key: dependency-cache-{{ checksum "package.json" }}
+
+      # - run: npm install
+
+      - run:
+          name: Install npm modules
+          command: npm install
+
       - save_cache: # special step to save the dependency cache with the `package.json` cache key template
           key: node-theme-v2-{{ checksum "./package.json" }}
           paths:
