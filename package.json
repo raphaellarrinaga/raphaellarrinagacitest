@@ -1,5 +1,5 @@
 {
-  "name": "raphael-larrinaga",
+  "name": "raphaellarrinaga",
   "version": "1.99.0",
   "description": "Raphael Larrinaga website",
   "main": "gulpfile.js",
@@ -9,31 +9,33 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://raphaellarrinaga@bitbucket.org/raphaellarrinaga/raphaellarrinaga.git"
+    "url": "git+https://raphaellarrinaga@bitbucket.org/raphaellarrinaga/raphaellarrinagacircleci.git"
   },
   "keywords": [
     "html5",
     "portfolio"
   ],
   "author": "Raphaël Larrinaga",
-  "homepage": "https://bitbucket.org/raphaellarrinaga/raphaellarrinaga#readme",
+  "homepage": "https://bitbucket.org/raphaellarrinaga/raphaellarrinagacircleci#readme",
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "eslint": "^5.2.0",
-    "gulp": "^3.9.1",
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
     "gulp-combine-mq": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^5.0.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-livereload": "^4.0.1",
     "gulp-notify": "^3.2.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "http": "0.0.0",
-    "st": "^1.2.0"
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "normalize-scss": "^7.0.1"
   },
   "dependencies": {
-    "gulp-htmlmin": "^4.0.0",
     "normalize-scss": "^7.0.1"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

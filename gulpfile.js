@@ -1,118 +1,97 @@
-'use strict';
+/**
+ * @file
+ */
 
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const livereload = require('gulp-livereload');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const combineMq = require('gulp-combine-mq');
-const concat = require("gulp-concat");
-const http = require('http');
-const st = require('st');
-const eslint = require('gulp-eslint');
-const uglify = require('gulp-uglify');
-const notify = require("gulp-notify");
-const htmlmin = require('gulp-htmlmin');
+(function () {
+  // eslint-disable-next-line strict
+  'use strict';
 
-// Error notifications with notify
-// Shows a banner on macOs
-const reportError = function(error) {
-  notify({
-    title: 'Gulp Task Error',
-    message: 'Check the console.'
-  }).write(error);
-  console.log(error.toString());
-  this.emit('end');
-};
+  const gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('autoprefixer'),
+    combineMq = require('gulp-combine-mq'),
+    livereload = require('gulp-livereload'),
+    postcss = require('gulp-postcss'),
+    htmlmin = require('gulp-htmlmin'),
+    notify = require('gulp-notify'),
+    plumber = require('gulp-plumber');
 
-const paths = {
+  const processors = [
+    autoprefixer(),
+  ];
+
+  const paths = {
     sass: './src/sass/**/*.scss',
     js: './src/js/*.js',
     html: './index.html',
-};
+  };
 
-// Sass compilation
-gulp.task('sass', function () {
-  gulp.src(paths.sass)
-    .pipe(sass({
-      sourceComments: true,
-      precision: 3,
-      includePaths: [].concat(
-        'node_modules/normalize-scss/sass'
+  // Error notifications with notify.
+  const reportError = (error) => {
+    notify.onError({
+      title: 'Gulp error in ' + error.plugin,
+      message: error.toString()
+    })(error);
+  };
+
+  function compileHtml() {
+    return gulp
+      .src(paths.html)
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest('./'));
+  }
+
+  exports.compileHtml = compileHtml;
+
+  // @todo group compile&watch css.
+  // Maybe see package.json npm scripts.
+  function compileCSS() {
+    return gulp
+      .src(paths.sass)
+      .pipe(
+        sass({
+          outputStyle: 'compressed',
+          sourceComments: false,
+          precision: 3,
+          includePaths: [].concat(
+            'node_modules/normalize-scss/sass'
+          ),
+        })
       )
-    }))
-    .pipe(gulp.dest('./assets/css'))
-    .on('error', reportError)
-    .pipe(livereload());
-});
+      .pipe(postcss(processors))
+      .pipe(plumber(reportError))
+      .pipe(gulp.dest('./assets/css'));
+  }
 
-// Sass production build
-gulp.task('sass:build', function () {
-  var processors = [
-    autoprefixer({browsers: ['last 2 versions']}),
-  ];
-  return gulp.src(paths.sass)
-    .pipe(sass({
-      outputStyle: 'compressed',
-      precision: 3,
-      includePaths: [].concat(
-        'node_modules/normalize-scss/sass'
+  function watchCSS() {
+    return gulp
+      .src(paths.sass)
+      .pipe(
+        sass({
+          outputStyle: 'nested',
+          sourceComments: true,
+          precision: 3,
+          includePaths: [].concat(
+            'node_modules/normalize-scss/sass'
+          ),
+        })
       )
-    }))
-    .pipe(combineMq({
-      beautify: false // false will inline css
-    }))
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('./assets/css'));
-});
+      .pipe(postcss(processors))
+      .pipe(plumber(reportError))
+      .pipe(gulp.dest('./assets/css'))
+      .pipe(livereload());
+  }
 
-gulp.task('html', function() {
-  return gulp.src(paths.html)
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./'));
-});
+  exports.watchCSS = watchCSS;
 
-// Lint.
+  function watchFiles() {
+    livereload.listen();
+    gulp.watch(paths.sass, watchCSS);
+  }
 
-gulp.task('lint', function () {
-  return gulp.src(paths.js)
-    .pipe(eslint({
-      'rules':{
-        'quotes': [1, 'single'],
-        'semi': [1, 'always']
-      }
-    }))
-    .pipe(eslint.formatEach('compact', process.stderr))
-    .pipe(uglify())
-    .on('error', reportError)
-    .pipe(gulp.dest('./assets/js')
-  );
-});
+  exports.watch = watchFiles;
 
+  const build = gulp.series(compileHtml, compileCSS);
+  exports.build = build;
 
-/**
- * Build tasks
- */
-
-// Set defaut task
-gulp.task('default', ['watch']);
-
-// Build sass files & styleguide
-// @todo html minify routine
-gulp.task('build', ['sass:build', 'lint']);
-
-// Watch sass files & generate styleguide
-gulp.task('watch', ['server'], function() {
-  livereload.listen();
-  gulp.watch(paths.sass, ['sass']);
-  gulp.watch(paths.js, ['lint']);
-  gulp.watch(paths.html, function (files){
-      livereload.changed(files)
-  });
-});
-
-gulp.task('server', function(done) {
-  http.createServer(
-    st({ path: __dirname, index: 'index.html', cache: false })
-  ).listen(8080, done);
-});
+}());

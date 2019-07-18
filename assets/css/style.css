@@ -1,1 +1,640 @@
-/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */html {line-height: 1.15;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}body {margin: 0;}article,aside,footer,header,nav,section {display: block;}h1 {font-size: 2em;margin: 0.67em 0;}figcaption,figure {display: block;}figure {margin: 1em 40px;}hr {-webkit-box-sizing: content-box;box-sizing: content-box;height: 0;overflow: visible;}main {display: block;}pre {font-family: monospace, monospace;font-size: 1em;}a {background-color: transparent;-webkit-text-decoration-skip: objects;}abbr[title] {border-bottom: none;text-decoration: underline;-webkit-text-decoration: underline dotted;text-decoration: underline dotted;}b,strong {font-weight: inherit;}b,strong {font-weight: bolder;}code,kbd,samp {font-family: monospace, monospace;font-size: 1em;}dfn {font-style: italic;}mark {background-color: #ff0;color: #000;}small {font-size: 80%;}sub,sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}sub {bottom: -0.25em;}sup {top: -0.5em;}audio,video {display: inline-block;}audio:not([controls]) {display: none;height: 0;}img {border-style: none;}svg:not(:root) {overflow: hidden;}button,input,optgroup,select,textarea {font-family: sans-serif;font-size: 100%;line-height: 1.15;margin: 0;}button {overflow: visible;}button,select {text-transform: none;}button,html [type="button"],[type="reset"],[type="submit"] {-webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {border-style: none;padding: 0;}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring {outline: 1px dotted ButtonText;}input {overflow: visible;}[type="checkbox"],[type="radio"] {-webkit-box-sizing: border-box;box-sizing: border-box;padding: 0;}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button {height: auto;}[type="search"] {-webkit-appearance: textfield;outline-offset: -2px;}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}::-webkit-file-upload-button {-webkit-appearance: button;font: inherit;}fieldset {padding: 0.35em 0.75em 0.625em;}legend {-webkit-box-sizing: border-box;box-sizing: border-box;display: table;max-width: 100%;padding: 0;color: inherit;white-space: normal;}progress {display: inline-block;vertical-align: baseline;}textarea {overflow: auto;}details {display: block;}summary {display: list-item;}menu {display: block;}canvas {display: inline-block;}template {display: none;}[hidden] {display: none;}*,*:after,*:before {-webkit-box-sizing: border-box;box-sizing: border-box;}:root {font-size: 20px;line-height: 1.5;}body {background: #fafafa;-webkit-box-sizing: border-box;box-sizing: border-box;color: #111;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;font-family: 'Inconsolata', monospace;min-height: 100vh;padding: 5vw 7vw;}h1 {font-size: 1rem;font-weight: 700;margin: 0;}h1 span {font-weight: normal;}ul {font-size: .7rem;list-style: none;margin: 1.5em -1vw;padding: 0;}li {padding: 1vw;}a {background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #FD3F92), to(#FD3F92)) no-repeat;background: linear-gradient(to top, #FD3F92 80%, #FD3F92 100%) no-repeat;background-size: 0 1px;background-position: 0 100%;color: #111;text-decoration: none;-webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);}a:focus,a:hover {background-size: 100% 1px;color: #FD3F92;outline: none;text-decoration: none;}.cv {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;}.cv__text {-webkit-box-flex: 1;-ms-flex: 1;flex: 1;}.cv__text:before {background: url("../img/icn-arrow-left.svg") no-repeat left center;content: "";display: inline-block;height: 11px;margin-right: .5rem;width: 15px;}.cv__link {background: white;border: 1px solid #111;-webkit-box-shadow: 2px 2px 0 #111;box-shadow: 2px 2px 0 #111;display: block;font-size: .4rem;line-height: 1.3;letter-spacing: .02rem;height: 112px;margin-right: .8rem;overflow: visible;padding: .4rem .5rem;position: relative;width: 81px;word-break: break-all;-webkit-transition: none;transition: none;}.cv__link:hover {cursor: url("../img/eyes.svg"),auto;-webkit-box-shadow: none;box-shadow: none;-webkit-transform: translateY(3px) translateX(3px);transform: translateY(3px) translateX(3px);}.cv__link:hover:before {right: -1px;}.cv__link abbr {float: left;font-size: .8rem;line-height: 1.4;margin-right: .3rem;text-decoration: none;}.cv__link span {display: block;margin-top: .1rem;}.cv__link:before {background: #111;border: 4px solid transparent;border-right-color: #fafafa;border-top-color: #fafafa;content: "";display: block;height: 0px;position: absolute;right: -3px;top: -1px;width: 0px;z-index: 10;}main {display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;margin-top: auto;}main p {margin-top: 0;}.description {font-size: .8rem;-webkit-box-flex: 1;-ms-flex: 1 1 22rem;flex: 1 1 22rem;max-width: 30rem;margin-right: 1rem;margin-bottom: 1rem;}figure {margin: 0;position: relative;}figcaption {font-size: .7rem;position: absolute;right: 0;top: 0;-webkit-transform-origin: 100% 100%;transform-origin: 100% 100%;-webkit-transform: rotate(90deg) translateX(100%) translateY(150%);transform: rotate(90deg) translateX(100%) translateY(150%);white-space: nowrap;}figcaption:before {background: white;border-radius: 4px;content: "";display: inline-block;height: 6px;margin-right: .5rem;width: 6px;}footer {font-size: .7rem;margin: 3rem -.5vw 0;}footer span,footer a {color: #666;margin: .5vw;text-decoration: none;}footer span {font-weight: bold;}@media (min-width: 480px) {li {display: inline-block;}}@media (min-width: 520px) {figure {text-align: right;}}
+/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Document
+       ========================================================================== */
+/**
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in
+     *    IE on Windows Phone and in iOS.
+     */
+/* line 56, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+       ========================================================================== */
+/**
+     * Remove the margin in all browsers (opinionated).
+     */
+/* line 85, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+body {
+  margin: 0; }
+
+/**
+     * Add the correct display in IE 9-.
+     */
+/* line 93, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+/* line 107, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+/* line 200, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+figcaption,
+figure {
+  display: block; }
+
+/**
+     * Add the correct margin in IE 8.
+     */
+/* line 209, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+/* line 223, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+     * Add the correct display in IE.
+     */
+/* line 233, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+main {
+  display: block; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+/* line 253, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Links
+       ========================================================================== */
+/**
+     * 1. Remove the gray background on active links in IE 10.
+     * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+     */
+/* line 268, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/* Text-level semantics
+       ========================================================================== */
+/**
+     * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+/* line 283, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+     * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+     */
+/* line 293, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+/* line 302, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+/* line 312, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+     * Add the correct font style in Android 4.3-.
+     */
+/* line 323, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+dfn {
+  font-style: italic; }
+
+/**
+     * Add the correct background and color in IE 9-.
+     */
+/* line 331, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+     * Add the correct font size in all browsers.
+     */
+/* line 340, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+small {
+  font-size: 80%; }
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+/* line 349, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 357, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 361, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+/* line 374, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+audio,
+video {
+  display: inline-block; }
+
+/**
+     * Add the correct display in iOS 4-7.
+     */
+/* line 383, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+     * Remove the border on images inside links in IE 10-.
+     */
+/* line 392, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+img {
+  border-style: none; }
+
+/**
+     * Hide the overflow in IE.
+     */
+/* line 400, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+       ========================================================================== */
+/**
+     * 1. Change the font styles in all browsers (opinionated).
+     * 2. Remove the margin in Firefox and Safari.
+     */
+/* line 414, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+     * Show the overflow in IE.
+     */
+/* line 434, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+button {
+  overflow: visible; }
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+/* line 443, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+     * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+     *    controls in Android 4.
+     * 2. Correct the inability to style clickable types in iOS and Safari.
+     */
+/* line 454, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/* line 461, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /**
+       * Remove the inner border and padding in Firefox.
+       */
+  /**
+       * Restore the focus styles unset by the previous rule.
+       */ }
+  /* line 470, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0; }
+  /* line 479, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText; }
+
+/**
+     * Show the overflow in Edge.
+     */
+/* line 488, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+input {
+  overflow: visible; }
+
+/**
+     * 1. Add the correct box sizing in IE 10-.
+     * 2. Remove the padding in IE 10-.
+     */
+/* line 497, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+/* line 507, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+/* line 517, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+  /**
+       * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+       */ }
+  /* line 525, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+  [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+/* line 536, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/**
+     * Correct the padding in Firefox.
+     */
+/* line 545, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+/* line 556, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  color: inherit;
+  /* 2 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+     * 1. Add the correct display in IE 9-.
+     * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+/* line 570, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+     * Remove the default vertical scrollbar in IE.
+     */
+/* line 579, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+textarea {
+  overflow: auto; }
+
+/* Interactive
+       ========================================================================== */
+/*
+     * Add the correct display in Edge, IE, and Firefox.
+     */
+/* line 592, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+details {
+  display: block; }
+
+/*
+     * Add the correct display in all browsers.
+     */
+/* line 600, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+summary {
+  display: list-item; }
+
+/*
+     * Add the correct display in IE 9-.
+     */
+/* line 608, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+menu {
+  display: block; }
+
+/* Scripting
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+/* line 641, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+canvas {
+  display: inline-block; }
+
+/**
+     * Add the correct display in IE.
+     */
+/* line 649, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+template {
+  display: none; }
+
+/* Hidden
+       ========================================================================== */
+/**
+     * Add the correct display in IE 10-.
+     */
+/* line 662, node_modules/normalize-scss/sass/normalize/_normalize-mixin.scss */
+[hidden] {
+  display: none; }
+
+/* line 10, src/sass/style.scss */
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+/* line 16, src/sass/style.scss */
+:root {
+  font-size: 20px;
+  line-height: 1.5; }
+
+/* line 21, src/sass/style.scss */
+body {
+  background: #fafafa;
+  box-sizing: border-box;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+  min-height: 100vh;
+  padding: 5vw 7vw; }
+
+/* line 32, src/sass/style.scss */
+h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0; }
+  /* line 37, src/sass/style.scss */
+  h1 span {
+    font-weight: normal; }
+
+/* line 42, src/sass/style.scss */
+ul {
+  font-size: .7rem;
+  list-style: none;
+  margin: 1.5em -1vw;
+  padding: 0; }
+
+/* line 49, src/sass/style.scss */
+li {
+  padding: 1vw; }
+  @media (min-width: 480px) {
+    /* line 49, src/sass/style.scss */
+    li {
+      display: inline-block; } }
+
+/* line 57, src/sass/style.scss */
+a {
+  background: linear-gradient(to top, #FD3F92 80%, #FD3F92 100%) no-repeat;
+  background-size: 0 1px;
+  background-position: 0 100%;
+  color: #111;
+  text-decoration: none;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+  /* line 65, src/sass/style.scss */
+  a:focus, a:hover {
+    background-size: 100% 1px;
+    color: #FD3F92;
+    outline: none;
+    text-decoration: none; }
+
+/* line 74, src/sass/style.scss */
+.cv {
+  display: flex;
+  align-items: flex-end; }
+
+/* line 79, src/sass/style.scss */
+.cv__text {
+  flex: 1; }
+  /* line 82, src/sass/style.scss */
+  .cv__text:before {
+    background: url("../img/icn-arrow-left.svg") no-repeat left center;
+    content: "";
+    display: inline-block;
+    height: 11px;
+    margin-right: .5rem;
+    width: 15px; }
+
+/* line 92, src/sass/style.scss */
+.cv__link {
+  background: white;
+  border: 1px solid #111;
+  box-shadow: 2px 2px 0 #111;
+  display: block;
+  font-size: .4rem;
+  line-height: 1.3;
+  letter-spacing: .02rem;
+  height: 112px;
+  margin-right: .8rem;
+  overflow: visible;
+  padding: .4rem .5rem;
+  position: relative;
+  width: 81px;
+  word-break: break-all;
+  transition: none; }
+  /* line 110, src/sass/style.scss */
+  .cv__link:hover {
+    cursor: url("../img/eyes.svg"), auto;
+    box-shadow: none;
+    transform: translateY(3px) translateX(3px); }
+    /* line 115, src/sass/style.scss */
+    .cv__link:hover:before {
+      right: -1px; }
+  /* line 121, src/sass/style.scss */
+  .cv__link abbr {
+    float: left;
+    font-size: .8rem;
+    line-height: 1.4;
+    margin-right: .3rem;
+    text-decoration: none; }
+  /* line 129, src/sass/style.scss */
+  .cv__link span {
+    display: block;
+    margin-top: .1rem; }
+  /* line 134, src/sass/style.scss */
+  .cv__link:before {
+    background: #111;
+    border: 4px solid transparent;
+    border-right-color: #fafafa;
+    border-top-color: #fafafa;
+    content: "";
+    display: block;
+    height: 0px;
+    position: absolute;
+    right: -3px;
+    top: -1px;
+    width: 0px;
+    z-index: 10; }
+
+/* line 150, src/sass/style.scss */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: auto; }
+  /* line 156, src/sass/style.scss */
+  main p {
+    margin-top: 0; }
+
+/* line 161, src/sass/style.scss */
+.description {
+  font-size: .8rem;
+  flex: 1 1 22rem;
+  max-width: 30rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem; }
+
+/* line 169, src/sass/style.scss */
+figure {
+  margin: 0;
+  position: relative; }
+  @media (min-width: 520px) {
+    /* line 169, src/sass/style.scss */
+    figure {
+      text-align: right; } }
+
+/* line 178, src/sass/style.scss */
+figcaption {
+  font-size: .7rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 100% 100%;
+  transform: rotate(90deg) translateX(100%) translateY(150%);
+  white-space: nowrap; }
+  /* line 187, src/sass/style.scss */
+  figcaption:before {
+    background: white;
+    border-radius: 4px;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin-right: .5rem;
+    width: 6px; }
+
+/* line 198, src/sass/style.scss */
+footer {
+  font-size: .7rem;
+  margin: 3rem -.5vw 0; }
+  /* line 202, src/sass/style.scss */
+  footer span,
+  footer a {
+    color: #666;
+    margin: .5vw;
+    text-decoration: none; }
+  /* line 209, src/sass/style.scss */
+  footer span {
+    font-weight: bold; }

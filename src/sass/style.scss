@@ -9,16 +9,16 @@ $pink: #FD3F92;
 // Globals
 *,
 *:after,
-*:before{
+*:before {
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-size: 20px;
   line-height: 1.5;
 }
 
-body{
+body {
   background: $page-color;
   box-sizing: border-box;
   color: $text-color;
@@ -29,32 +29,32 @@ body{
   padding: 5vw 7vw;
 }
 
-h1{
+h1 {
   font-size: 1rem;
   font-weight: 700;
   margin: 0;
 
-  span{
+  span {
     font-weight: normal;
   }
 }
 
-ul{
+ul {
   font-size: .7rem;
   list-style: none;
   margin: 1.5em -1vw;
   padding: 0;
 }
 
-li{
+li {
   padding: 1vw;
 
-  @media (min-width: 480px){
+  @media (min-width: 480px) {
     display: inline-block;
   }
 }
 
-a{
+a {
   background: linear-gradient(to top,$pink 80%,$pink 100%) no-repeat;
   background-size: 0 1px;
   background-position: 0 100%;
@@ -63,7 +63,7 @@ a{
   transition: all .6s cubic-bezier(0.19,1,0.22,1);
 
   &:focus,
-  &:hover{
+  &:hover {
     background-size: 100% 1px;
     color: $pink;
     outline: none;
@@ -71,15 +71,15 @@ a{
   }
 }
 
-.cv{
+.cv {
   display: flex;
   align-items: flex-end;
 }
 
-.cv__text{
+.cv__text {
   flex: 1;
 
-  &:before{
+  &:before {
     background: url("../img/icn-arrow-left.svg") no-repeat left center;
     content: "";
     display: inline-block;
@@ -89,7 +89,7 @@ a{
   }
 }
 
-.cv__link{
+.cv__link {
   background: white;
   border: 1px solid #111;
   box-shadow: 2px 2px 0 #111;
@@ -107,18 +107,18 @@ a{
   word-break: break-all;
   transition: none;
 
-  &:hover{
+  &:hover {
     cursor: url("../img/eyes.svg"), auto;
     box-shadow: none;
     transform: translateY(3px) translateX(3px);
 
-    &:before{
+    &:before {
       right: -1px;
     }
 
   }
 
-  abbr{
+  abbr {
     float: left;
     font-size: .8rem;
     line-height: 1.4;
@@ -126,12 +126,12 @@ a{
     text-decoration: none;
   }
 
-  span{
+  span {
     display: block;
     margin-top: .1rem;
   }
 
-  &:before{
+  &:before {
     background: #111;
     border: 4px solid transparent;
     border-right-color: $page-color;
@@ -147,18 +147,18 @@ a{
   }
 }
 
-main{
+main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: auto;
 
-  p{
+  p {
     margin-top: 0;
   }
 }
 
-.description{
+.description {
   font-size: .8rem;
   flex: 1 1 22rem;
   max-width: 30rem;
@@ -166,16 +166,16 @@ main{
   margin-bottom: 1rem;
 }
 
-figure{
+figure {
   margin: 0;
   position: relative;
 
-  @media (min-width: 520px){
+  @media (min-width: 520px) {
     text-align: right;
   }
 }
 
-figcaption{
+figcaption {
   font-size: .7rem;
   position: absolute;
   right: 0;
@@ -184,7 +184,7 @@ figcaption{
   transform: rotate(90deg) translateX(100%) translateY(150%);
   white-space: nowrap;
 
-  &:before{
+  &:before {
     background: white;
     border-radius: 4px;
     content: "";
@@ -195,18 +195,18 @@ figcaption{
   }
 }
 
-footer{
+footer {
   font-size: .7rem;
   margin: 3rem -.5vw 0;
 
   span,
-   a{
+   a {
     color: #666;
     margin: .5vw;
     text-decoration: none;
   }
 
-  span{
+  span {
     font-weight: bold;
   }
 }
